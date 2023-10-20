@@ -25,3 +25,15 @@ apus_service/
 ### truffle:
 
 `truffle migrate`
+
+
+### contract config
+
+> rpc_url https://sepolia-rpc.scroll.io
+
+> chain_id 534351
+
+|合约名称|合约地址||
+|-|-|-|
+|account |0xa6983d77EBF8C55E153BcBa8E2cd616b512cE0C2||
+|mardket |0x1d77589F3d73E601D35bCA37EB308a714293Cd93||
