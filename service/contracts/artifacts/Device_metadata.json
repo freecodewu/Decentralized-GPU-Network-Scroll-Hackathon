@@ -1,0 +1,185 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "devices",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"internalType": "enum DeviceStatus",
+						"name": "status",
+						"type": "uint8"
+					},
+					{
+						"internalType": "string",
+						"name": "machineId",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "serverInfo",
+						"type": "string"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "serverPrice",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "storagePrice",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "upbandWidth",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "downbandWidth",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Price",
+						"name": "price",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_deviceId",
+						"type": "uint256"
+					}
+				],
+				"name": "getDevice",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "owner",
+								"type": "address"
+							},
+							{
+								"internalType": "enum DeviceStatus",
+								"name": "status",
+								"type": "uint8"
+							},
+							{
+								"internalType": "string",
+								"name": "machineId",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "serverInfo",
+								"type": "string"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "serverPrice",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "storagePrice",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "upbandWidth",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "downbandWidth",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct Price",
+								"name": "price",
+								"type": "tuple"
+							}
+						],
+						"internalType": "struct deviceInfo",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/device.sol": "Device"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/device.sol": {
+			"keccak256": "0x5c48face09069bfed38e5092ac0ee67bb2d81fdc8bc6478120690222862ac31a",
+			"license": "SEE LICENSE IN LICENSE",
+			"urls": [
+				"bzz-raw://8c59a99ed3c31ff68a109a45b1abb759b19cb10861727ca0f876afd8e7d12b14",
+				"dweb:/ipfs/QmZovvoNfbQF5utcemPK8w6st2TbrMgFG1dkpG2jgiHaVp"
+			]
+		}
+	},
+	"version": 1
+}

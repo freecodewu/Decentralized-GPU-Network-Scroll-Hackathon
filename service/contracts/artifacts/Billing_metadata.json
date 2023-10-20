@@ -1,0 +1,751 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "a",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "b",
+						"type": "string"
+					}
+				],
+				"name": "concatenateStrings",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "devices",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"internalType": "enum DeviceStatus",
+						"name": "status",
+						"type": "uint8"
+					},
+					{
+						"internalType": "string",
+						"name": "machineId",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "serverInfo",
+						"type": "string"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "serverPrice",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "storagePrice",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "upbandWidth",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "downbandWidth",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Price",
+						"name": "price",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_deviceId",
+						"type": "uint256"
+					}
+				],
+				"name": "getDevice",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "owner",
+								"type": "address"
+							},
+							{
+								"internalType": "enum DeviceStatus",
+								"name": "status",
+								"type": "uint8"
+							},
+							{
+								"internalType": "string",
+								"name": "machineId",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "serverInfo",
+								"type": "string"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "serverPrice",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "storagePrice",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "upbandWidth",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "downbandWidth",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct Price",
+								"name": "price",
+								"type": "tuple"
+							}
+						],
+						"internalType": "struct deviceInfo",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_deviceId",
+						"type": "uint256"
+					}
+				],
+				"name": "getLeaseByDeviceId",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "owner",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "leaseId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "startTime",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "expireTime",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "deviceId",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct leaseInfo",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_leaseId",
+						"type": "uint256"
+					}
+				],
+				"name": "getProviderBillingByLeaseId",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "user",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "leaseId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "providerBlockedFund",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "recipientBlockedFunds",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "enum billingStatus",
+								"name": "status",
+								"type": "uint8"
+							},
+							{
+								"internalType": "enum billingType",
+								"name": "billType",
+								"type": "uint8"
+							}
+						],
+						"internalType": "struct billingInfo",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_leaseId",
+						"type": "uint256"
+					}
+				],
+				"name": "getRecipientBillingByLeaseId",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "user",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "leaseId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "providerBlockedFund",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "recipientBlockedFunds",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "enum billingStatus",
+								"name": "status",
+								"type": "uint8"
+							},
+							{
+								"internalType": "enum billingType",
+								"name": "billType",
+								"type": "uint8"
+							}
+						],
+						"internalType": "struct billingInfo",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "leaseProvider",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "leaseId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "startTime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "expireTime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "deviceId",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "leaseRecipient",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "leaseId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "startTime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "expireTime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "deviceId",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "platformSharingRatio",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "providerBillings",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "leaseId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "providerBlockedFund",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "recipientBlockedFunds",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum billingStatus",
+						"name": "status",
+						"type": "uint8"
+					},
+					{
+						"internalType": "enum billingType",
+						"name": "billType",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_startTime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_endTime",
+						"type": "uint256"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "serverPrice",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "storagePrice",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "upbandWidth",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "downbandWidth",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Price",
+						"name": "_price",
+						"type": "tuple"
+					}
+				],
+				"name": "providerStakeCalcute",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "recipientBillings",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "leaseId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "providerBlockedFund",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "recipientBlockedFunds",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum billingStatus",
+						"name": "status",
+						"type": "uint8"
+					},
+					{
+						"internalType": "enum billingType",
+						"name": "billType",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_startTime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_endTime",
+						"type": "uint256"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "serverPrice",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "storagePrice",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "upbandWidth",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "downbandWidth",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Price",
+						"name": "_price",
+						"type": "tuple"
+					}
+				],
+				"name": "recipientStakeCalcute",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_leaseId",
+						"type": "uint256"
+					}
+				],
+				"name": "terminateLease",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "owner",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "leaseId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "startTime",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "expireTime",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "deviceId",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct leaseInfo",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "number",
+						"type": "uint256"
+					}
+				],
+				"name": "uintToString",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/lease.sol": "Billing"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/device.sol": {
+			"keccak256": "0x5c48face09069bfed38e5092ac0ee67bb2d81fdc8bc6478120690222862ac31a",
+			"license": "SEE LICENSE IN LICENSE",
+			"urls": [
+				"bzz-raw://8c59a99ed3c31ff68a109a45b1abb759b19cb10861727ca0f876afd8e7d12b14",
+				"dweb:/ipfs/QmZovvoNfbQF5utcemPK8w6st2TbrMgFG1dkpG2jgiHaVp"
+			]
+		},
+		"contracts/lease.sol": {
+			"keccak256": "0x3f39e7433caaef84b7e144a9d6e4dbedaccb920720261535e1dba972bcc51d49",
+			"license": "SEE LICENSE IN LICENSE",
+			"urls": [
+				"bzz-raw://f182ea515f5ab4aa0f9a2bbdbb8a7813dcb699d8f386a2501bc7b25262dc6af4",
+				"dweb:/ipfs/QmVU62WTEGbPeB9U51m4opRi7ap8SxYPMUxjuEdGfvgjRK"
+			]
+		}
+	},
+	"version": 1
+}
